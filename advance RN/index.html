@@ -1,11 +1,15 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
 <head>
-<title>SimpleBlog</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<link rel="stylesheet" href="images/SimpleBlog.css" type="text/css" />
+  <title>SimpleBlog</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="images/SimpleBlog.css" type="text/css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
+
 <body>
+
 <div id="wrap">
   <div id="header">
     <h1 id="logo">Simple<span class="gray">Blog</span></h1>
@@ -101,5 +105,31 @@
     <p> &copy; 2006 <strong>Your Company</strong> &nbsp;&nbsp; Design by: <a href="http://www.styleshout.com/">styleshout</a> | Valid: <a href="http://validator.w3.org/check/referer">XHTML</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://all-free-download.com/free-website-templates/">Home</a>&nbsp;|&nbsp; <a href="http://all-free-download.com/free-website-templates/">Sitemap</a>&nbsp;|&nbsp; <a href="http://all-free-download.com/free-website-templates/">Home</a> </p>
   </div>
 </div>
-<div align=center>This template  downloaded form <a href='http://all-free-download.com/free-website-templates/'>free website templates</a></div></body>
+<div align=center>This template  downloaded form <a href='http://all-free-download.com/free-website-templates/'>free website templates</a></div>
+
+<script>
+  $(document).ready(function(){
+      $("a").attr("href","http://www.codefactory.wien");  
+      $("code").css("color","red");
+      $("ol>li").css("background-color","#2a7b90");
+      $("input:text").val("Express your opinion");
+      $("img").attr("src", "https://cdn.pixabay.com/photo/2018/03/08/17/02/tulips-3209128_1280.jpg");
+      $("blockquote").css({
+         "background-color" : "orange", 
+         "font-style": "italic"
+       });
+      $("#logo").css("background-color", "black");
+      $(".gray").css("background-color", "white");
+      $(".date").remove();
+      var newItem= $(`
+        <li>New Templates</li>
+        <li>Order Template</li>
+        <li>Contact Us</li>
+        `);
+      $(".sidemenu:first").append(newItem);
+      $("#sidebar p:first").html("When someone says: \'I want a programming language in which I need only to say what I wish, and done\', give him a lollipop.");
+    });
+</script>
+
+</body>
 </html>
