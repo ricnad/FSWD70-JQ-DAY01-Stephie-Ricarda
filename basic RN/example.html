@@ -4,6 +4,7 @@
 	<meta charset="UTF-8" />
 	<title>CSS Selectors</title>
 	<link rel="stylesheet" href="styles.css" />
+	<script src="https://code.jquery.com/jquery-3.4.1.js" charset="utf-8" async defer></script>
 </head>
 <body>
 
@@ -47,6 +48,22 @@
 
 						<!-- my script -->
 						<script src="myscript.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("*").css("background-color","yellow");
+				$("p").css("background-color", "lightblue");
+				$("p#intro").css("background-color", "red");
+				$(".note").css("background-color","orange");
+				$("div.note").css("background-color","green");
+				$("article p").css("background-color","pink");
+				$("p:last").css("background-color","grey");
+				$("p:first").css("color", "red");
+				$("p [href]").css("color", "green");
+				$("ul li:eq(1)").css("background-color", "white");
+				$("p:nth-of-type(2)").css("color", "white");
+				$("p:nth-of-type(3)").css("color", "white");
+			});
+		</script>
 
-					</body>
-					</html>
+	</body>
+</html>
